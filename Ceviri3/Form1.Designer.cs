@@ -100,6 +100,7 @@
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton5, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton5, "");
             this.bunifuImageButton5.Zoom = 10;
+            this.bunifuImageButton5.Click += new System.EventHandler(this.BunifuImageButton5_Click);
             // 
             // bunifuImageButton4
             // 

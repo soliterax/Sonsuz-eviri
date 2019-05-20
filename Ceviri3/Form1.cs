@@ -86,6 +86,20 @@ namespace Ceviri3
                     this.Opacity -= 0.025;
                 }
             }
+            else if(a == "ayarlar")
+            {
+                if (this.Opacity == 0)
+                {
+                    timer1.Stop();
+                    ayarlar ayar = new ayarlar();
+                    ayar.Visible = true;
+                    this.Close();
+                }
+                else
+                {
+                    this.Opacity -= 0.025;
+                }
+            }
         }
 
         private void Timer2_Tick(object sender, EventArgs e)
@@ -97,6 +111,21 @@ namespace Ceviri3
             else
             {
                 this.Opacity += 0.025;
+            }
+        }
+
+        private void BunifuImageButton5_Click(object sender, EventArgs e)
+        {
+            if (timer2.Enabled == true)
+            {
+                timer2.Stop();
+                a = "ayarlar";
+                timer1.Start();
+            }
+            else
+            {
+                a = "ayarlar";
+                timer1.Start();
             }
         }
     }

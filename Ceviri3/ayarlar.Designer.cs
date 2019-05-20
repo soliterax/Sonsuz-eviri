@@ -236,6 +236,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ayarlar";
+            this.Opacity = 0D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sonsuz Çeviri | Ayarlar";
             this.Load += new System.EventHandler(this.Ayarlar_Load);
             this.ResumeLayout(false);

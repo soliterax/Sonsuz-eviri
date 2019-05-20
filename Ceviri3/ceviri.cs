@@ -308,7 +308,8 @@ namespace Ceviri3
 
         private void BunifuTextBox2_OnIconRightClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(bunifuTextBox2.Text);
+            string son = bunifuTextBox2.Text;
+            Clipboard.SetText(son);
         }
 
         private void BunifuTextBox1_DoubleClick(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace Ceviri3
         SonsuzFile file = new SonsuzFile(Environment.CurrentDirectory + "/settings.ini");
         private void Ayarlar_Load(object sender, EventArgs e)
         {
+            timer2.Start();
             if (dil().Contains("turkish"))
             {
                 bunifuLabel1.Text = "Program Dili";
@@ -34,6 +35,16 @@ namespace Ceviri3
             {
                 bunifuLabel1.Text = "";
                 bunifuLabel2.Text = "";
+            }
+            else
+            {
+                bunifuLabel1.Text = "Program Dili";
+                bunifuLabel2.Text = "Program Teması";
+                bunifuDropdown1.Items.Add("Arapça");
+                bunifuDropdown1.Items.Add("İngilizce");
+                bunifuDropdown1.Items.Add("Türkçe");
+                bunifuDropdown2.Items.Add("Beyaz");
+                bunifuDropdown2.Items.Add("Siyah");
             }
         }
         
@@ -74,6 +85,22 @@ namespace Ceviri3
             if (timer2.Enabled == true)
             {
                 timer2.Stop();
+                if (bunifuDropdown1.Text == "İngilizce" || bunifuDropdown1.Text == "" || bunifuDropdown1.Text == "")
+                {
+                    file.Write("Application", "Language", "english");
+                }
+                else if (bunifuDropdown1.Text == "Arapça" || bunifuDropdown1.Text == "Arabic" || bunifuDropdown1.Text == "")
+                {
+                    file.Write("Application", "Language", "arabic");
+                }
+                else if (bunifuDropdown1.Text == "Türkçe" || bunifuDropdown1.Text == "Turkish" || bunifuDropdown1.Text == "")
+                {
+                    file.Write("Application", "Language", "turkish");
+                }
+                timer1.Start();
+            }
+            else
+            {
                 if (bunifuDropdown1.Text == "İngilizce" || bunifuDropdown1.Text == "" || bunifuDropdown1.Text == "")
                 {
                     file.Write("Application", "Language", "english");
