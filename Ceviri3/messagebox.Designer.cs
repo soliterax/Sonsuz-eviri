@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(messagebox));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -147,13 +147,13 @@
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.Location = new System.Drawing.Point(504, 164);
             this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties7.BorderColor = System.Drawing.Color.Lime;
-            stateProperties7.BorderRadius = 30;
-            stateProperties7.BorderThickness = 1;
-            stateProperties7.FillColor = System.Drawing.Color.Lime;
-            stateProperties7.IconLeftImage = null;
-            stateProperties7.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties7;
+            stateProperties1.BorderColor = System.Drawing.Color.Lime;
+            stateProperties1.BorderRadius = 30;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.Lime;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
             this.bunifuButton1.Size = new System.Drawing.Size(103, 28);
             this.bunifuButton1.TabIndex = 12;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,10 +184,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "messagebox";
             this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "messagebox";
+            this.Text = "Sonsuz Çeviri | Bilgiler";
             this.Load += new System.EventHandler(this.Messagebox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

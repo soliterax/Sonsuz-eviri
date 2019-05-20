@@ -43,6 +43,7 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -340,6 +341,13 @@
             this.timer2.Interval = 5;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // ceviri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,11 +363,13 @@
             this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.bunifuImageButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ceviri";
             this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ceviri";
+            this.Text = "Sonsuz Çeviri | Anasayfa";
             this.Load += new System.EventHandler(this.Ceviri_Load);
+            this.DoubleClick += new System.EventHandler(this.Ceviri_DoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -383,5 +393,6 @@
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

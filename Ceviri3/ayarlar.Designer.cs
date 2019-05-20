@@ -73,6 +73,7 @@
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.Size = new System.Drawing.Size(217, 32);
             this.bunifuDropdown1.TabIndex = 0;
+            this.bunifuDropdown1.Text = null;
             this.bunifuToolTip1.SetToolTip(this.bunifuDropdown1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuDropdown1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuDropdown1, "");
@@ -104,6 +105,7 @@
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.Size = new System.Drawing.Size(217, 32);
             this.bunifuDropdown2.TabIndex = 1;
+            this.bunifuDropdown2.Text = null;
             this.bunifuToolTip1.SetToolTip(this.bunifuDropdown2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuDropdown2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuDropdown2, "");
@@ -118,6 +120,7 @@
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(0, 0);
             this.bunifuLabel1.TabIndex = 2;
+            this.bunifuLabel1.Text = null;
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bunifuToolTip1.SetToolTip(this.bunifuLabel1, "");
@@ -134,6 +137,7 @@
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(0, 0);
             this.bunifuLabel2.TabIndex = 3;
+            this.bunifuLabel2.Text = null;
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.bunifuToolTip1.SetToolTip(this.bunifuLabel2, "");
@@ -182,6 +186,7 @@
             this.bunifuImageButton1.WaitOnLoad = false;
             this.bunifuImageButton1.Zoom = 0;
             this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
             // 
             // bunifuToolTip1
             // 
@@ -229,8 +234,9 @@
             this.Controls.Add(this.bunifuDropdown2);
             this.Controls.Add(this.bunifuDropdown1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ayarlar";
-            this.Text = "ayarlar";
+            this.Text = "Sonsuz Çeviri | Ayarlar";
             this.Load += new System.EventHandler(this.Ayarlar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

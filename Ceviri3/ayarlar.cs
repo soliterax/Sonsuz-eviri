@@ -68,5 +68,26 @@ namespace Ceviri3
                 this.Opacity += 0.025;
             }
         }
+
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            if (timer2.Enabled == true)
+            {
+                timer2.Stop();
+                if (bunifuDropdown1.Text == "İngilizce" || bunifuDropdown1.Text == "" || bunifuDropdown1.Text == "")
+                {
+                    file.Write("Application", "Language", "english");
+                }
+                else if (bunifuDropdown1.Text == "Arapça" || bunifuDropdown1.Text == "Arabic" || bunifuDropdown1.Text == "")
+                {
+                    file.Write("Application", "Language", "arabic");
+                }
+                else if (bunifuDropdown1.Text == "Türkçe" || bunifuDropdown1.Text == "Turkish" || bunifuDropdown1.Text == "")
+                {
+                    file.Write("Application", "Language", "turkish");
+                }
+                timer1.Start();
+            }
+        }
     }
 }

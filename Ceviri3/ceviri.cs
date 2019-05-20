@@ -308,7 +308,7 @@ namespace Ceviri3
 
         private void BunifuTextBox2_OnIconRightClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(bunifuTextBox1.Text);
+            Clipboard.SetText(bunifuTextBox2.Text);
         }
 
         private void BunifuTextBox1_DoubleClick(object sender, EventArgs e)
@@ -476,6 +476,11 @@ namespace Ceviri3
             {
                 this.Opacity -= 0.025;
             }
+        }
+
+        private void Ceviri_DoubleClick(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

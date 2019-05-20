@@ -181,10 +181,11 @@
             this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.bunifuImageButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "yapimcilar";
             this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "yapimcilar";
+            this.Text = "Sonsuz Çeviri | Yapımcılar";
             this.Load += new System.EventHandler(this.Yapimcilar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
