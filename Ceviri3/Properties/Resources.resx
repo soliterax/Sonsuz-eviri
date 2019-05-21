@@ -124,11 +124,11 @@
   <data name="checkmark_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\checkmark_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pencere Kapat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencere Kapat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pencere Kapat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pencere Kapat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\indir.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +148,14 @@
   <data name="back_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ayarlar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ayarlar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="worker_male_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\worker_male_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yapımcılar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yapımcılar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="copy_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\copy_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,10 +163,10 @@
   <data name="synchronize_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\synchronize_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yapımcılar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yapımcılar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ayarlar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ayarlar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="worker_male_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\worker_male_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="darkcheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darkcheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

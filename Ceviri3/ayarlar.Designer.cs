@@ -37,8 +37,8 @@
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
+            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -65,11 +65,15 @@
             this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Purple;
             this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.Purple;
             this.bunifuDropdown1.ItemForeColor = System.Drawing.Color.Purple;
             this.bunifuDropdown1.ItemHeight = 26;
             this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(301, 87);
+            this.bunifuDropdown1.Items.AddRange(new object[] {
+            "English",
+            "Türkçe",
+            " العربية"});
+            this.bunifuDropdown1.Location = new System.Drawing.Point(362, 86);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.Size = new System.Drawing.Size(217, 32);
             this.bunifuDropdown1.TabIndex = 0;
@@ -101,7 +105,7 @@
             this.bunifuDropdown2.ItemForeColor = System.Drawing.Color.Purple;
             this.bunifuDropdown2.ItemHeight = 26;
             this.bunifuDropdown2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.bunifuDropdown2.Location = new System.Drawing.Point(301, 211);
+            this.bunifuDropdown2.Location = new System.Drawing.Point(362, 211);
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.Size = new System.Drawing.Size(217, 32);
             this.bunifuDropdown2.TabIndex = 1;
@@ -154,40 +158,6 @@
             this.timer2.Interval = 1;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = global::Ceviri3.Properties.Resources.checkmark_64px;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 0;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(90, 90);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(90, 90);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(639, 288);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(90, 90);
-            this.bunifuImageButton1.TabIndex = 4;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, null);
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Kaydet");
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 0;
-            this.bunifuImageButton1.ZoomSpeed = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
-            // 
             // bunifuToolTip1
             // 
             this.bunifuToolTip1.Active = true;
@@ -222,6 +192,40 @@
             this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.ActiveImage = null;
+            this.bunifuImageButton1.AllowAnimations = true;
+            this.bunifuImageButton1.AllowZooming = true;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
+            this.bunifuImageButton1.FadeWhenInactive = false;
+            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.bunifuImageButton1.Image = global::Ceviri3.Properties.Resources.checkmark_64px;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.ImageLocation = null;
+            this.bunifuImageButton1.ImageMargin = 0;
+            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(90, 90);
+            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(90, 90);
+            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
+            this.bunifuImageButton1.Location = new System.Drawing.Point(639, 288);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Rotation = 0;
+            this.bunifuImageButton1.ShowActiveImage = true;
+            this.bunifuImageButton1.ShowCursorChanges = true;
+            this.bunifuImageButton1.ShowImageBorders = true;
+            this.bunifuImageButton1.ShowSizeMarkers = false;
+            this.bunifuImageButton1.Size = new System.Drawing.Size(90, 90);
+            this.bunifuImageButton1.TabIndex = 4;
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, null);
+            this.bunifuImageButton1.ToolTipText = "";
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Kaydet");
+            this.bunifuImageButton1.WaitOnLoad = false;
+            this.bunifuImageButton1.Zoom = 0;
+            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
             // 
             // ayarlar
             // 
