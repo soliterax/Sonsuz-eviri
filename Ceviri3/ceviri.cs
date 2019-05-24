@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -29,67 +30,64 @@ namespace Ceviri3
             return input.First().ToString().ToUpper() + input.Substring(1);
 
         }
-
         private string doPost(string URL, string postData)
         {
-
-            try
-            {
-
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
-
-                request.Method = WebRequestMethods.Http.Post;
-                request.ContentType = "application/x-www-form-urlencoded";
-                request.Referer = "https://www.lifemcserver.com/";
-                request.UserAgent = "Mozilla/5.0";
-                request.Proxy = null;
-
-                var data = Encoding.UTF8.GetBytes(postData);
-
-                using (Stream stream = request.GetRequestStream())
+                try
                 {
 
-                    stream.Write(data, 0, data.Length);
-                    stream.Close();
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
 
-                }
+                    request.Method = WebRequestMethods.Http.Post;
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Referer = "https://www.lifemcserver.com/";
+                    request.UserAgent = "Mozilla/5.0";
+                    request.Proxy = null;
 
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    var data = Encoding.UTF8.GetBytes(postData);
 
-                if (!response.StatusCode.Equals(HttpStatusCode.OK))
-                {
-                    return "Hata Oluştu: #" + response.StatusCode.ToString();
-                }
+                    using (Stream stream = request.GetRequestStream())
+                    {
 
-                Stream streamResponse = response.GetResponseStream();
-                StreamReader streamRead = new StreamReader(streamResponse);
+                        stream.Write(data, 0, data.Length);
+                        stream.Close();
 
-                Char[] readBuff = new Char[256];
-                int count = streamRead.Read(readBuff, 0, 256);
+                    }
 
-                String responseStr = "";
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-                while (count > 0)
-                {
-                    String outputData = new String(readBuff, 0, count);
-                    responseStr = responseStr + outputData;
-                    count = streamRead.Read(readBuff, 0, 256);
-                }
+                    if (!response.StatusCode.Equals(HttpStatusCode.OK))
+                    {
+                        return "Hata Oluştu: #" + response.StatusCode.ToString();
+                    }
 
-                streamResponse.Close();
-                streamRead.Close();
-                response.Close();
-                request.Abort();
+                    Stream streamResponse = response.GetResponseStream();
+                    StreamReader streamRead = new StreamReader(streamResponse);
 
-                responseStr = responseStr.ToString().Trim();
+                    Char[] readBuff = new Char[256];
+                    int count = streamRead.Read(readBuff, 0, 256);
 
-                if (responseStr.Replace(" ", "").Length < 1 || responseStr.ToLower().Contains("invalid") || responseStr.ToLower().Contains("error"))
-                {
-                    return "Bilinmeyen hata oluştu :/";
-                }
+                    String responseStr = "";
 
-                return responseStr;
+                    while (count > 0)
+                    {
+                        String outputData = new String(readBuff, 0, count);
+                        responseStr = responseStr + outputData;
+                        count = streamRead.Read(readBuff, 0, 256);
+                    }
 
+                    streamResponse.Close();
+                    streamRead.Close();
+                    response.Close();
+                    request.Abort();
+
+                    responseStr = responseStr.ToString().Trim();
+
+                    if (responseStr.Replace(" ", "").Length < 1 || responseStr.ToLower().Contains("invalid") || responseStr.ToLower().Contains("error"))
+                    {
+                        return "Bilinmeyen hata oluştu :/";
+                    }
+
+                    return responseStr;
             }
             catch (WebException we)
             {
@@ -320,27 +318,43 @@ namespace Ceviri3
         private void BunifuImageButton2_Click(object sender, EventArgs e)
         {
             string degis = bunifuDropdown1.Text;
-            bunifuDropdown1.Text = bunifuDropdown1.Text;
-            bunifuDropdown1.Text = degis;
+            bunifuDropdown1.Text = bunifuDropdown2.Text;
+            bunifuDropdown2.Text = degis;
         }
 
         private void BunifuImageButton3_Click(object sender, EventArgs e)
         {
-            cevirme();
+            kontrol = InternetKontrol();
+            if(kontrol == true)
+            {
+                cevirme();
+            }
+            else
+            {
+                bunifuTextBox2.Text = "İnternet bağlantınız bulunmuyor.Lütfen daha sonra tekrar deneyiniz.";
+            }
         }
 
         private void BunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
+            kontrol = InternetKontrol();
             if (e.KeyCode == Keys.Enter)
             {
-                cevirme();
+                if (kontrol == true)
+                {
+                    cevirme();
+                }
+                else
+                {
+                    bunifuTextBox2.Text = "İnternet bağlantınız bulunmuyor.Lütfen daha sonra tekrar deneyiniz.";
+                }
             }
         }
 
         public void yazi()
         {
 
-            string dil = ini.Read("APP", "Language");
+            string dil = ini.Read("Application", "Language");
             if (dil.Contains("turkish"))
             {
 
@@ -364,7 +378,22 @@ namespace Ceviri3
                 bunifuDropdown2.Items.Add("Korece");
                 bunifuDropdown2.Items.Add("Rusça");
                 bunifuDropdown2.Items.Add("Türkçe");
-
+                label1.Text = "Sonsuz";
+                label2.Text = "Çeviri";
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox1, "Çevrilecek metin");
+                bunifuToolTip1.SetToolTip(bunifuTextBox1, "Çevirmek istediğiniz kelimeyi buraya yazın \nya da sağdaki yapıştır butonunu kullanın");
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox2, "Çevrilen metin");
+                bunifuToolTip1.SetToolTip(bunifuTextBox2, "Çevrilen metnin gösterildiği yerdir.sağdan kopyalayabilirsiniz.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown1, "Bu Dilden");
+                bunifuToolTip1.SetToolTip(bunifuDropdown1, "Çevrilicek dil burdan seçilir.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown2, "Şu Dile");
+                bunifuToolTip1.SetToolTip(bunifuDropdown2, "Çevrilen dil buradan seçilir.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton1, "Geri");
+                bunifuToolTip1.SetToolTip(bunifuImageButton1, "Bastığınızda geri döner");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton2, "Değiştir");
+                bunifuToolTip1.SetToolTip(bunifuImageButton2, "Dillerin yerini değiştirir.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton3, "Çevir");
+                bunifuToolTip1.SetToolTip(bunifuImageButton3, "Bastığınızda çevirir.");
 
             }
             else if (dil.Contains("english"))
@@ -390,9 +419,25 @@ namespace Ceviri3
                 bunifuDropdown2.Items.Add("Korean");
                 bunifuDropdown2.Items.Add("Russian");
                 bunifuDropdown2.Items.Add("Turkish");
+                label1.Text = "Infinite";
+                label2.Text = "Translation";
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox1, "Text To Translate");
+                bunifuToolTip1.SetToolTip(bunifuTextBox1, "Type the text you want to translate\nhere or paste it from the right button.");
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox2, "Translated Text");
+                bunifuToolTip1.SetToolTip(bunifuTextBox2, "Where the translated text is.If you want to read it,\ncopy it from the button on the right.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown1, "From this language");
+                bunifuToolTip1.SetToolTip(bunifuDropdown1, "The language to translate is selected from here.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown2, "This Language");
+                bunifuToolTip1.SetToolTip(bunifuDropdown2, "The language to translate is selected here.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton1, "Back");
+                bunifuToolTip1.SetToolTip(bunifuImageButton1, "When you press it, it returns.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton2, "Replace");
+                bunifuToolTip1.SetToolTip(bunifuImageButton2, "Move languages.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton3, "Translate");
+                bunifuToolTip1.SetToolTip(bunifuImageButton3, "When you press it, it translates.");
 
             }
-            else if (dil.Contains("arapca"))
+            else if (dil.Contains("arabic"))
             {
 
                 bunifuTextBox1.Text = "النص المراد ترجمته";
@@ -415,6 +460,22 @@ namespace Ceviri3
                 bunifuDropdown2.Items.Add("الكورية");
                 bunifuDropdown2.Items.Add("الروسية");
                 bunifuDropdown2.Items.Add("التركية");
+                label1.Text = "اللانهائية";
+                label2.Text = "الترجمة";
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox1, "النص المراد ترجمته");
+                bunifuToolTip1.SetToolTip(bunifuTextBox1, "اكتب الكلمة التي تريد ترجمتها ، أو استخدام معجون زر على اليمين");
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox2, "ترجمة النص");
+                bunifuToolTip1.SetToolTip(bunifuTextBox2, "النص المترجم هو مبين.يمكنك نسخ من الحق.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown1, "من هذه اللغة");
+                bunifuToolTip1.SetToolTip(bunifuDropdown1, "هنا لغة للترجمة هو المحدد.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown2, "لغة الماء");
+                bunifuToolTip1.SetToolTip(bunifuDropdown2, "ترجمة اللغة هي المحدد هنا.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton1, "مرة أخرى");
+                bunifuToolTip1.SetToolTip(bunifuImageButton1, "يتحول مرة أخرى عند الضغط");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton2, "تغيير");
+                bunifuToolTip1.SetToolTip(bunifuImageButton2, "مكان اللغة التغييرات.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton3, "الوجه");
+                bunifuToolTip1.SetToolTip(bunifuImageButton3, "عند الضغط على المنعطفات.");
 
             }
             else
@@ -440,16 +501,41 @@ namespace Ceviri3
                 bunifuDropdown2.Items.Add("Korece");
                 bunifuDropdown2.Items.Add("Rusça");
                 bunifuDropdown2.Items.Add("Türkçe");
-
+                label1.Text = "Sonsuz";
+                label2.Text = "Çeviri";
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox1, "Çevrilecek metin");
+                bunifuToolTip1.SetToolTip(bunifuTextBox1, "Çevirmek istediğiniz kelimeyi buraya yazın \nya da sağdaki yapıştır butonunu kullanın");
+                bunifuToolTip1.SetToolTipTitle(bunifuTextBox2, "Çevrilen metin");
+                bunifuToolTip1.SetToolTip(bunifuTextBox2, "Çevrilen metnin gösterildiği yerdir.sağdan kopyalayabilirsiniz.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown1, "Bu Dilden");
+                bunifuToolTip1.SetToolTip(bunifuDropdown1, "Çevrilicek dil burdan seçilir.");
+                bunifuToolTip1.SetToolTipTitle(bunifuDropdown2, "Şu Dile");
+                bunifuToolTip1.SetToolTip(bunifuDropdown2, "Çevrilen dil buradan seçilir.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton1, "Geri");
+                bunifuToolTip1.SetToolTip(bunifuImageButton1, "Bastığınızda geri döner");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton2, "Değiştir");
+                bunifuToolTip1.SetToolTip(bunifuImageButton2, "Dillerin yerini değiştirir.");
+                bunifuToolTip1.SetToolTipTitle(bunifuImageButton3, "Çevir");
+                bunifuToolTip1.SetToolTip(bunifuImageButton3, "Bastığınızda çevirir.");
             }
-
-
         }
 
         private void Ceviri_Load(object sender, EventArgs e)
         {
-            timer2.Start();
             yazi();
+            if(ini.Read("Application","Background").Contains("dark"))
+            {
+                this.BackColor = ColorTranslator.FromHtml("#3E3E42");
+                bunifuTextBox1.FillColor = ColorTranslator.FromHtml("#3E3E42");
+                bunifuTextBox2.FillColor = ColorTranslator.FromHtml("#3E3E42");
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                bunifuTextBox1.FillColor = Color.White;
+                bunifuTextBox2.FillColor = Color.White;
+            }
+            timer2.Start();
         }
 
         private void Timer2_Tick(object sender, EventArgs e)
@@ -482,6 +568,20 @@ namespace Ceviri3
         private void Ceviri_DoubleClick(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+        bool kontrol;
+        public static bool InternetKontrol()
+        {
+            try
+            {
+                System.Net.Sockets.TcpClient kontrol_client = new System.Net.Sockets.TcpClient("www.google.com.tr", 80);
+                kontrol_client.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

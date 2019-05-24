@@ -72,7 +72,7 @@
             this.bunifuDropdown1.Items.AddRange(new object[] {
             "English",
             "Türkçe",
-            " العربية"});
+            "العربية"});
             this.bunifuDropdown1.Location = new System.Drawing.Point(362, 86);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.Size = new System.Drawing.Size(217, 32);

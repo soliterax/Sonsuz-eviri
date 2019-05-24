@@ -37,26 +37,78 @@ namespace Ceviri3
 
         public void dogruluk(string harf)
         {
-            if (harf.Contains("a"))
+            bunifuFlatButton1.Visible = false;
+            bunifuFlatButton2.Visible = false;
+            bunifuFlatButton3.Visible = false;
+            bunifuFlatButton4.Visible = false;
+            if (harf == dogru)
             {
-
-            }
-            else if (harf.Contains("b"))
-            {
-
-            }
-            else if (harf.Contains("c"))
-            {
-
-            }
-            else if (harf.Contains("d"))
-            {
-
+                if (harf == "a")
+                {
+                    
+                    bunifuFlatButton1.BackColor = Color.Green;
+                    bunifuFlatButton2.BackColor = Color.Red;
+                    bunifuFlatButton3.BackColor = Color.Red;
+                    bunifuFlatButton4.BackColor = Color.Red;
+                }
+                else if (harf == "b")
+                {
+                    bunifuFlatButton1.BackColor = Color.Red;
+                    bunifuFlatButton2.BackColor = Color.Green;
+                    bunifuFlatButton3.BackColor = Color.Red;
+                    bunifuFlatButton4.BackColor = Color.Red;
+                }
+                else if (harf == "c")
+                {
+                    bunifuFlatButton1.BackColor = Color.Red;
+                    bunifuFlatButton2.BackColor = Color.Red;
+                    bunifuFlatButton3.BackColor = Color.Green;
+                    bunifuFlatButton4.BackColor = Color.Red;
+                }
+                else if (harf == "d")
+                {
+                    bunifuFlatButton1.BackColor = Color.Red;
+                    bunifuFlatButton2.BackColor = Color.Red;
+                    bunifuFlatButton3.BackColor = Color.Red;
+                    bunifuFlatButton4.BackColor = Color.Green;
+                }
             }
             else
             {
+                if (harf == "a")
+                {
 
+                    bunifuFlatButton1.BackColor = Color.Green;
+                    bunifuFlatButton2.BackColor = Color.Red;
+                    bunifuFlatButton3.BackColor = Color.Red;
+                    bunifuFlatButton4.BackColor = Color.Red;
+                }
+                else if (harf == "b")
+                {
+                    bunifuFlatButton1.BackColor = Color.Red;
+                    bunifuFlatButton2.BackColor = Color.Green;
+                    bunifuFlatButton3.BackColor = Color.Red;
+                    bunifuFlatButton4.BackColor = Color.Red;
+                }
+                else if (harf == "c")
+                {
+                    bunifuFlatButton1.BackColor = Color.Red;
+                    bunifuFlatButton2.BackColor = Color.Red;
+                    bunifuFlatButton3.BackColor = Color.Green;
+                    bunifuFlatButton4.BackColor = Color.Red;
+                }
+                else if (harf == "d")
+                {
+                    bunifuFlatButton1.BackColor = Color.Red;
+                    bunifuFlatButton2.BackColor = Color.Red;
+                    bunifuFlatButton3.BackColor = Color.Red;
+                    bunifuFlatButton4.BackColor = Color.Green;
+                }
             }
+            bunifuFlatButton1.Visible = true;
+            bunifuFlatButton2.Visible = true;
+            bunifuFlatButton3.Visible = true;
+            bunifuFlatButton4.Visible = true;
         }
     }
 }

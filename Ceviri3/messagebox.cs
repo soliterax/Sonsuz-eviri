@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SonsuzAlgoritma;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -34,6 +35,43 @@ namespace Ceviri3
 
         private void Messagebox_Load(object sender, EventArgs e)
         {
+            SonsuzFile file = new SonsuzFile(Environment.CurrentDirectory + "/settings.ini");
+            if (file.Read("Application","Background").Contains("dark"))
+            {
+                this.BackColor = ColorTranslator.FromHtml("#3E3E42");
+            }
+            else
+            {
+                this.BackColor = Color.White;
+            }
+            if(file.Read("Application","Language").Contains("turkish"))
+            {
+                label5.Text = "Adı Soyadı:";
+                label6.Text = "Discord Adresi:";
+                label7.Text = "Facebook Adresi:";
+                label3.Text = "Yardım Ettiği Hususlar:";
+            }
+            else if(file.Read("Application", "Language").Contains("english"))
+            {
+                label5.Text = "Name Surname:";
+                label6.Text = "Discord Address:";
+                label7.Text = "Facebook Adress:";
+                label3.Text = "Helping matters:";
+            }
+            else if (file.Read("Application", "Language").Contains("arabic"))
+            {
+                label5.Text = "اسم اللقب" + ":";
+                label6.Text = "الفتنة عنوان" + ":";
+                label7.Text = "Facebook عنوان" + ":";
+                label3.Text = "يساعد" + ":";
+            }
+            else
+            {
+                label5.Text = "Adı Soyadı:";
+                label6.Text = "Discord Adresi:";
+                label7.Text = "Facebook Adresi:";
+                label3.Text = "Yardım Ettiği Hususlar:";
+            }
             timer2.Start();
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SonsuzAlgoritma;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -107,6 +108,15 @@ namespace Ceviri3
 
         private void Yapimcilar_Load(object sender, EventArgs e)
         {
+            SonsuzFile file = new SonsuzFile(Environment.CurrentDirectory + "/settings.ini");
+            if(file.Read("Application","Background").Contains("dark"))
+            {
+                this.BackColor = ColorTranslator.FromHtml("#3E3E42");
+            }
+            else
+            {
+                this.BackColor = Color.White;
+            }
             timer2.Start();
         }
 

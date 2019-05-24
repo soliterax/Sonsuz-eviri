@@ -111,11 +111,13 @@ namespace Ceviri3
             }
             else if (dil().Contains("arabic"))
             {
-                bunifuLabel1.Text = "";
-                bunifuLabel2.Text = "";
+                bunifuLabel1.Text = "لغة التطبيق";
+                bunifuLabel2.Text = "موضوع التطبيق";
+                bunifuDropdown1.Text = "العربية";
+                bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "احفظ");
                 if (file.Read("Application", "Background").Contains("light"))
                 {
-                    bunifuDropdown2.Text = "Light";
+                    bunifuDropdown2.Text = "الضوء";
                     this.BackColor = Color.White;
                     bunifuLabel1.ForeColor = Color.Blue;
                     bunifuLabel2.ForeColor = Color.Blue;
@@ -132,7 +134,7 @@ namespace Ceviri3
                 }
                 else
                 {
-                    bunifuDropdown2.Text = "Dark";
+                    bunifuDropdown2.Text = "الظلام";
                     this.BackColor = ColorTranslator.FromHtml("#3E3E42");
                     bunifuLabel1.ForeColor = Color.Red;
                     bunifuLabel2.ForeColor = Color.Red;
@@ -147,8 +149,8 @@ namespace Ceviri3
                     bunifuDropdown2.ItemBorderColor = dark;
                     bunifuDropdown2.ItemForeColor = dark;
                 }
-                bunifuDropdown1.Items.Add("");
-                bunifuDropdown2.Items.Add("");
+                bunifuDropdown2.Items.Add("الضوء");
+                bunifuDropdown2.Items.Add("الظلام");
             }
             else
             {

@@ -96,7 +96,7 @@
             this.bunifuImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton5.TabIndex = 4;
             this.bunifuImageButton5.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton5, "Ayarlar");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton5, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton5, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton5, "");
             this.bunifuImageButton5.Zoom = 10;
@@ -112,7 +112,7 @@
             this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton4.TabIndex = 3;
             this.bunifuImageButton4.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "Yapımcılar");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton4, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton4, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton4, "");
             this.bunifuImageButton4.Zoom = 10;
@@ -128,7 +128,7 @@
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 2;
             this.bunifuImageButton3.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton3, "Anasayfa");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton3, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton3, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton3, "");
             this.bunifuImageButton3.Zoom = 10;
@@ -144,10 +144,11 @@
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 1;
             this.bunifuImageButton2.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "Oyun");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton2, "");
             this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.BunifuImageButton2_Click);
             // 
             // bunifuImageButton1
             // 
@@ -159,7 +160,7 @@
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "Kapat");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "");
             this.bunifuImageButton1.Zoom = 10;

@@ -88,7 +88,7 @@
             // 
             this.bunifuDropdown2.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuDropdown2.BorderRadius = 13;
-            this.bunifuDropdown2.Color = System.Drawing.Color.Green;
+            this.bunifuDropdown2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.bunifuDropdown2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.bunifuDropdown2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuDropdown2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -99,10 +99,10 @@
             this.bunifuDropdown2.FillIndicator = false;
             this.bunifuDropdown2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bunifuDropdown2.Font = new System.Drawing.Font("Elephant", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Red;
             this.bunifuDropdown2.FormattingEnabled = true;
             this.bunifuDropdown2.Icon = null;
-            this.bunifuDropdown2.IndicatorColor = System.Drawing.Color.Green;
+            this.bunifuDropdown2.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.bunifuDropdown2.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.bunifuDropdown2.ItemBackColor = System.Drawing.Color.White;
             this.bunifuDropdown2.ItemBorderColor = System.Drawing.Color.Lime;
@@ -114,15 +114,15 @@
             this.bunifuDropdown2.Size = new System.Drawing.Size(168, 32);
             this.bunifuDropdown2.TabIndex = 9;
             this.bunifuDropdown2.Text = null;
-            this.bunifuToolTip1.SetToolTip(this.bunifuDropdown2, "Burdada çevrilecek dil seçilir.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuDropdown2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuDropdown2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuDropdown2, "Şu Dile");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuDropdown2, "");
             // 
             // bunifuDropdown1
             // 
             this.bunifuDropdown1.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuDropdown1.BorderRadius = 13;
-            this.bunifuDropdown1.Color = System.Drawing.Color.Green;
+            this.bunifuDropdown1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.bunifuDropdown1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuDropdown1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -133,10 +133,10 @@
             this.bunifuDropdown1.FillIndicator = false;
             this.bunifuDropdown1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bunifuDropdown1.Font = new System.Drawing.Font("Elephant", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Red;
             this.bunifuDropdown1.FormattingEnabled = true;
             this.bunifuDropdown1.Icon = null;
-            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.Green;
+            this.bunifuDropdown1.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.bunifuDropdown1.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
             this.bunifuDropdown1.ItemBackColor = System.Drawing.Color.White;
             this.bunifuDropdown1.ItemBorderColor = System.Drawing.Color.Lime;
@@ -148,9 +148,9 @@
             this.bunifuDropdown1.Size = new System.Drawing.Size(168, 32);
             this.bunifuDropdown1.TabIndex = 10;
             this.bunifuDropdown1.Text = null;
-            this.bunifuToolTip1.SetToolTip(this.bunifuDropdown1, "Buradan çevrilecek dil seçilir.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuDropdown1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuDropdown1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuDropdown1, "Bu Dilden");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuDropdown1, "");
             // 
             // bunifuToolTip1
             // 
@@ -189,6 +189,7 @@
             // 
             // bunifuImageButton3
             // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = global::Ceviri3.Properties.Resources.checkmark_64px;
             this.bunifuImageButton3.ImageActive = null;
             this.bunifuImageButton3.Location = new System.Drawing.Point(405, 393);
@@ -197,9 +198,9 @@
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 12;
             this.bunifuImageButton3.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton3, "Bastığınızda çevirir.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton3, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton3, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton3, "Çevir");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton3, "");
             this.bunifuImageButton3.Zoom = 10;
             this.bunifuImageButton3.Click += new System.EventHandler(this.BunifuImageButton3_Click);
             // 
@@ -211,16 +212,17 @@
             this.bunifuTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.bunifuTextBox2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox2.BackgroundImage")));
-            this.bunifuTextBox2.BorderColorActive = System.Drawing.Color.Red;
+            this.bunifuTextBox2.BorderColorActive = System.Drawing.Color.Green;
             this.bunifuTextBox2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox2.BorderColorHover = System.Drawing.Color.Blue;
-            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.Green;
+            this.bunifuTextBox2.BorderColorHover = System.Drawing.Color.Red;
+            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.bunifuTextBox2.BorderRadius = 30;
             this.bunifuTextBox2.BorderThickness = 2;
             this.bunifuTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox2.DefaultFont = new System.Drawing.Font("Elephant", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuTextBox2.DefaultText = "";
             this.bunifuTextBox2.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBox2.ForeColor = System.Drawing.Color.Blue;
             this.bunifuTextBox2.HideSelection = true;
             this.bunifuTextBox2.IconLeft = null;
             this.bunifuTextBox2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -244,10 +246,9 @@
             this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox2.TextMarginLeft = 5;
             this.bunifuTextBox2.TextPlaceholder = "";
-            this.bunifuToolTip1.SetToolTip(this.bunifuTextBox2, "Çevrilen metnin olduğu yerdir.İsterseniz okuyun isterseniz sağdaki butondan kopya" +
-        "layın.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuTextBox2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuTextBox2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuTextBox2, "Çevrilen Metin");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuTextBox2, "");
             this.bunifuTextBox2.UseSystemPasswordChar = false;
             this.bunifuTextBox2.OnIconRightClick += new System.EventHandler(this.BunifuTextBox2_OnIconRightClick);
             // 
@@ -259,16 +260,17 @@
             this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.Red;
+            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.Green;
             this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.Blue;
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Green;
+            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.Red;
+            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(190)))), ((int)(((byte)(166)))));
             this.bunifuTextBox1.BorderRadius = 30;
             this.bunifuTextBox1.BorderThickness = 2;
             this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Elephant", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bunifuTextBox1.DefaultText = "";
             this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBox1.ForeColor = System.Drawing.Color.Blue;
             this.bunifuTextBox1.HideSelection = true;
             this.bunifuTextBox1.IconLeft = null;
             this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -292,15 +294,16 @@
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox1.TextMarginLeft = 5;
             this.bunifuTextBox1.TextPlaceholder = "";
-            this.bunifuToolTip1.SetToolTip(this.bunifuTextBox1, "Çeviriceğiniz metni buraya yazın ya da sağdaki butondan yapıştırın.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuTextBox1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuTextBox1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuTextBox1, "Çevrilecek Metin");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuTextBox1, "");
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.OnIconRightClick += new System.EventHandler(this.BunifuTextBox1_OnIconRightClick);
             this.bunifuTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BunifuTextBox1_KeyDown);
             // 
             // bunifuImageButton2
             // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton2.Image = global::Ceviri3.Properties.Resources.synchronize_64px;
             this.bunifuImageButton2.ImageActive = null;
             this.bunifuImageButton2.Location = new System.Drawing.Point(354, 393);
@@ -309,15 +312,16 @@
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 5;
             this.bunifuImageButton2.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "Dillerin yerini değiştirir.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton2, "Değiştir");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton2, "");
             this.bunifuImageButton2.Zoom = 10;
             this.bunifuImageButton2.Click += new System.EventHandler(this.BunifuImageButton2_Click);
             // 
             // bunifuImageButton1
             // 
-            this.bunifuImageButton1.Image = global::Ceviri3.Properties.Resources.Pencere_Kapat;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = global::Ceviri3.Properties.Resources.back_64px;
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(381, 12);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
@@ -325,9 +329,9 @@
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 4;
             this.bunifuImageButton1.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "Bastığınızda geri döner.");
+            this.bunifuToolTip1.SetToolTip(this.bunifuImageButton1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuImageButton1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Geri");
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "");
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.BunifuImageButton1_Click);
             // 
