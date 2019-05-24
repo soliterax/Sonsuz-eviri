@@ -20,5 +20,12 @@ namespace Ceviri3
         {
 
         }
+
+        private void BunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Visible = true;
+            this.Close();
+        }
     }
 }
