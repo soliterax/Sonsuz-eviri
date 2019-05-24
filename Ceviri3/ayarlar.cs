@@ -18,7 +18,6 @@ namespace Ceviri3
         Color light = Color.Green;
         Color dark = Color.Red;
         SonsuzFile file = new SonsuzFile(Environment.CurrentDirectory + "/settings.ini");
-        SonsuzLock sifre = new SonsuzLock("b0mb@can", 4);
 
         private void Ayarlar_Load(object sender, EventArgs e)
         {
@@ -54,6 +53,16 @@ namespace Ceviri3
                     this.BackColor = ColorTranslator.FromHtml("#3E3E42");
                     bunifuLabel1.ForeColor = Color.Red;
                     bunifuLabel2.ForeColor = Color.Red;
+                    bunifuDropdown1.Color = dark;
+                    bunifuDropdown1.ForeColor = dark;
+                    bunifuDropdown1.IndicatorColor = dark;
+                    bunifuDropdown1.ItemBorderColor = dark;
+                    bunifuDropdown1.ItemForeColor = dark;
+                    bunifuDropdown2.Color = dark;
+                    bunifuDropdown2.ForeColor = dark;
+                    bunifuDropdown2.IndicatorColor = dark;
+                    bunifuDropdown2.ItemBorderColor = dark;
+                    bunifuDropdown2.ItemForeColor = dark;
                 }
             }
             else if (dil().Contains("english"))
@@ -62,13 +71,39 @@ namespace Ceviri3
                 bunifuLabel2.Text = "Application Theme";
                 bunifuDropdown1.Text = "English";
                 bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Save");
-                if (sifre.sifrecoz(file.Read("Application", "Background")).Contains("light"))
+                if (file.Read("Application", "Background").Contains("light"))
                 {
                     bunifuDropdown2.Text = "Light";
+                    this.BackColor = Color.White;
+                    bunifuLabel1.ForeColor = Color.Blue;
+                    bunifuLabel2.ForeColor = Color.Blue;
+                    bunifuDropdown1.Color = light;
+                    bunifuDropdown1.ForeColor = light;
+                    bunifuDropdown1.IndicatorColor = light;
+                    bunifuDropdown1.ItemBorderColor = light;
+                    bunifuDropdown1.ItemForeColor = light;
+                    bunifuDropdown2.Color = light;
+                    bunifuDropdown2.ForeColor = light;
+                    bunifuDropdown2.IndicatorColor = light;
+                    bunifuDropdown2.ItemBorderColor = light;
+                    bunifuDropdown2.ItemForeColor = light;
                 }
                 else
                 {
                     bunifuDropdown2.Text = "Dark";
+                    this.BackColor = ColorTranslator.FromHtml("#3E3E42");
+                    bunifuLabel1.ForeColor = Color.Red;
+                    bunifuLabel2.ForeColor = Color.Red;
+                    bunifuDropdown1.Color = dark;
+                    bunifuDropdown1.ForeColor = dark;
+                    bunifuDropdown1.IndicatorColor = dark;
+                    bunifuDropdown1.ItemBorderColor = dark;
+                    bunifuDropdown1.ItemForeColor = dark;
+                    bunifuDropdown2.Color = dark;
+                    bunifuDropdown2.ForeColor = dark;
+                    bunifuDropdown2.IndicatorColor = dark;
+                    bunifuDropdown2.ItemBorderColor = dark;
+                    bunifuDropdown2.ItemForeColor = dark;
                 }
                 bunifuDropdown2.Items.Add("Light");
                 bunifuDropdown2.Items.Add("Dark");
@@ -78,6 +113,42 @@ namespace Ceviri3
             {
                 bunifuLabel1.Text = "";
                 bunifuLabel2.Text = "";
+                if (file.Read("Application", "Background").Contains("light"))
+                {
+                    bunifuDropdown2.Text = "Light";
+                    this.BackColor = Color.White;
+                    bunifuLabel1.ForeColor = Color.Blue;
+                    bunifuLabel2.ForeColor = Color.Blue;
+                    bunifuDropdown1.Color = light;
+                    bunifuDropdown1.ForeColor = light;
+                    bunifuDropdown1.IndicatorColor = light;
+                    bunifuDropdown1.ItemBorderColor = light;
+                    bunifuDropdown1.ItemForeColor = light;
+                    bunifuDropdown2.Color = light;
+                    bunifuDropdown2.ForeColor = light;
+                    bunifuDropdown2.IndicatorColor = light;
+                    bunifuDropdown2.ItemBorderColor = light;
+                    bunifuDropdown2.ItemForeColor = light;
+                }
+                else
+                {
+                    bunifuDropdown2.Text = "Dark";
+                    this.BackColor = ColorTranslator.FromHtml("#3E3E42");
+                    bunifuLabel1.ForeColor = Color.Red;
+                    bunifuLabel2.ForeColor = Color.Red;
+                    bunifuDropdown1.Color = dark;
+                    bunifuDropdown1.ForeColor = dark;
+                    bunifuDropdown1.IndicatorColor = dark;
+                    bunifuDropdown1.ItemBorderColor = dark;
+                    bunifuDropdown1.ItemForeColor = dark;
+                    bunifuDropdown2.Color = dark;
+                    bunifuDropdown2.ForeColor = dark;
+                    bunifuDropdown2.IndicatorColor = dark;
+                    bunifuDropdown2.ItemBorderColor = dark;
+                    bunifuDropdown2.ItemForeColor = dark;
+                }
+                bunifuDropdown1.Items.Add("");
+                bunifuDropdown2.Items.Add("");
             }
             else
             {
@@ -86,7 +157,41 @@ namespace Ceviri3
                 bunifuDropdown1.Text = "Türkçe";
                 bunifuDropdown2.Items.Add("Açık");
                 bunifuDropdown2.Items.Add("Koyu");
-                bunifuDropdown2.Text = "Siyah";
+                bunifuToolTip1.SetToolTipTitle(this.bunifuImageButton1, "Kaydet");
+                if (file.Read("Application", "Background").Contains("light"))
+                {
+                    bunifuDropdown2.Text = "Light";
+                    this.BackColor = Color.White;
+                    bunifuLabel1.ForeColor = Color.Blue;
+                    bunifuLabel2.ForeColor = Color.Blue;
+                    bunifuDropdown1.Color = light;
+                    bunifuDropdown1.ForeColor = light;
+                    bunifuDropdown1.IndicatorColor = light;
+                    bunifuDropdown1.ItemBorderColor = light;
+                    bunifuDropdown1.ItemForeColor = light;
+                    bunifuDropdown2.Color = light;
+                    bunifuDropdown2.ForeColor = light;
+                    bunifuDropdown2.IndicatorColor = light;
+                    bunifuDropdown2.ItemBorderColor = light;
+                    bunifuDropdown2.ItemForeColor = light;
+                }
+                else
+                {
+                    bunifuDropdown2.Text = "Dark";
+                    this.BackColor = ColorTranslator.FromHtml("#3E3E42");
+                    bunifuLabel1.ForeColor = Color.Red;
+                    bunifuLabel2.ForeColor = Color.Red;
+                    bunifuDropdown1.Color = dark;
+                    bunifuDropdown1.ForeColor = dark;
+                    bunifuDropdown1.IndicatorColor = dark;
+                    bunifuDropdown1.ItemBorderColor = dark;
+                    bunifuDropdown1.ItemForeColor = dark;
+                    bunifuDropdown2.Color = dark;
+                    bunifuDropdown2.ForeColor = dark;
+                    bunifuDropdown2.IndicatorColor = dark;
+                    bunifuDropdown2.ItemBorderColor = dark;
+                    bunifuDropdown2.ItemForeColor = dark;
+                }
             }
         }
         
@@ -146,15 +251,15 @@ namespace Ceviri3
 
                 if (bunifuDropdown2.Text == "Açık" || bunifuDropdown2.Text == "Light" || bunifuDropdown2.Text == "الضوء")
                 {
-                    file.Write("Application", "Background", sifre.sifrele("light"));
+                    file.Write("Application", "Background", "light");
                 }
                 else if (bunifuDropdown2.Text == "Koyu" || bunifuDropdown2.Text == "Dark" || bunifuDropdown2.Text == "الظلام")
                 {
-                    file.Write("Application", "Background", sifre.sifrele("dark"));
+                    file.Write("Application", "Background", "dark");
                 }
                 else
                 {
-                    file.Write("Application", "Background", sifre.sifrele("dark"));
+                    file.Write("Application", "Background", "dark");
                 }
                 timer1.Start();
             }
@@ -179,15 +284,15 @@ namespace Ceviri3
 
                 if (bunifuDropdown2.Text == "Açık" || bunifuDropdown2.Text == "Light" || bunifuDropdown2.Text == "الضوء")
                 {
-                    file.Write("Application", "Background", sifre.sifrele("light"));
+                    file.Write("Application", "Background", "light");
                 }
                 else if (bunifuDropdown2.Text == "Koyu" || bunifuDropdown2.Text == "Dark" || bunifuDropdown2.Text == "الظلام")
                 {
-                    file.Write("Application", "Background", sifre.sifrele("dark"));
+                    file.Write("Application", "Background", "dark");
                 }
                 else
                 {
-                    file.Write("Application", "Background", sifre.sifrele("dark"));
+                    file.Write("Application", "Background", "dark");
                 }
                 timer1.Start();
             }

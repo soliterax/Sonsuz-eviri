@@ -117,68 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="oyunlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oyunlar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8,25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
-  <data name="checkmark_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkmark_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANIAAAAtCAYAAADbXTWOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALPSURBVHhe7d0hc9swFMBxw8HBwcKxbvZ6N7bBwcHBwsKC
+        3dVyQMcGCwcLA0sSKSxwcLAwsHAfIdOTlXZdXmzZSW9N/H93vyuI7Rronawny8p2EccX7qiopmeFcd8K
+        Y6/zys5FUbkl8Fys2mVeuXFsq2VhZq9jM/4/cVJN3sjN5Mb9qm90tnbjwD7wyXVbjNyVtOnYvJ8+pPfx
+        GX2j3RCwt0z9V3qsJ02o48ubl5K1azcAHCI/RDn5OnkVm/9uIjzGhYv/88+AQ2emn2MabBfvjP2i/gNg
+        IPLSnsd06BehsqFcGBiUkYyd3PjD5fxFTI308Cd+Vy8KDJQU2WJ6pAWPc4BOOpiYJs2RV/a9dGXaRQC4
+        pXQ0MV30kHKfdiKAxxrnmsI8ESVuoJ1xP2PaPI77uSIAabQ5Jl77AbqR90xj+tQRCgzKgQBa/N0rMWcE
+        9ONzZxzTKPRIt9pBAJr5RLoLbzzIwibtAAApZsu35eRTJi/kMQEL9CTTRSN3leVm9qOorH4QgBYhdxxl
+        b2BLoQwuM7TajwDSSMEh034A0A2lb2Bbxv2WHslRbAD6k87Ij5HstfYjgDQ+keZ8lwHYlu+MZA3SRyZk
+        gf7yyp2Gd+1ksKQdAKCFzx35eGpMJMZJQB9hfLQKWVOhHQSgiWwcMT2LaVTHw64SANLYxdpHI+mVgA7k
+        66ubPmXMC6xAKqU3WgVfEgISte1SEbawZPc9YAO7lDV8MV2ag8V+wEYueVcKOVBOIJmAB1LZvp98TQ05
+        QSabtAsCQxOS6MIdxfToFtIz5bKVunJhYBj8mMh3KJ17Ii0KY0sKEBgiqRckj4lSQr7dJQuYSCgMg120
+        7oO0TdTlcbtg6QUOTmjTvm37J7Cd9kKbIoydSnseihEswcDekqr0TNYT3UkxQdr0TsZCfaKu7rlTKUrU
+        VT6f0epNA89DSJy6Iu3kCUt2qozNuWdk2R+o/htRQwDvzAAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pencere Kapat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencere Kapat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\indir.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pencere Kapat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencere Kapat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="paste_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paste_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ayarlar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ayarlar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="oyunlar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oyunlar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="back_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="worker_male_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\worker_male_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yapımcılar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yapımcılar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copy_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="synchronize_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\synchronize_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ayarlar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ayarlar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="darkcheck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\darkcheck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="A" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="B" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="C" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="D" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Microsoft Sans Serif'; font-size: 8,25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: ; text-align: left; }</value>
   </data>
 </root>
