@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(splashscreen));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -49,23 +49,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Elephant", 18F);
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(140, 57);
+            this.label1.Location = new System.Drawing.Point(134, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sonsuz Çeviri";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Elephant", 18F);
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(56, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(354, 31);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Developer by Umut Özercan";
             // 
             // timer1
             // 
@@ -75,10 +63,10 @@
             // 
             this.bunifuProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuProgressBar1.BorderRadius = 5;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(0, 100);
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(0, 171);
             this.bunifuProgressBar1.MaximumValue = 100;
             this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.Green;
+            this.bunifuProgressBar1.ProgressColor = System.Drawing.SystemColors.Highlight;
             this.bunifuProgressBar1.Size = new System.Drawing.Size(455, 10);
             this.bunifuProgressBar1.TabIndex = 3;
             this.bunifuProgressBar1.Value = 0;
@@ -88,15 +76,27 @@
             this.timer2.Interval = 20;
             this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Elephant", 12F);
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(394, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "V3.0";
+            // 
             // splashscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Ceviri3.Properties.Resources.indir;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(455, 234);
-            this.Controls.Add(this.bunifuProgressBar1);
+            this.ClientSize = new System.Drawing.Size(455, 228);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.bunifuProgressBar1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -112,10 +112,10 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label2;
     }
 }
