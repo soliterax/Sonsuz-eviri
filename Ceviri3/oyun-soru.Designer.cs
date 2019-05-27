@@ -219,9 +219,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(239, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(377, 25);
+            this.label1.Size = new System.Drawing.Size(23, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Aşağıdakilerden hangisini yazımı doğrudur";
+            this.label1.Text = "1";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // Arkaplan
@@ -231,6 +231,7 @@
             this.Arkaplan.Name = "Arkaplan";
             this.Arkaplan.Size = new System.Drawing.Size(800, 251);
             this.Arkaplan.TabIndex = 2;
+            this.Arkaplan.Paint += new System.Windows.Forms.PaintEventHandler(this.Arkaplan_Paint);
             // 
             // oyun_soru
             // 

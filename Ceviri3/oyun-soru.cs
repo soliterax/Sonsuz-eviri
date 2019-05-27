@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SonsuzAlgoritma;
+using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Ceviri3
@@ -11,12 +13,27 @@ namespace Ceviri3
             InitializeComponent();
         }
         string dogru = "a";
+        SonsuzFile file = new SonsuzFile(Environment.CurrentDirectory + "/database.ini");
         private void Oyun_soru_Load(object sender, EventArgs e)
         {
             int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
+
+            Random r = new Random();
+            int ra = r.Next(1, 10);
+            string soru = file.Read("Game", "soru" + ra.ToString());
+            label1.Text = soru;
+            switch(ra)
+            {
+                case 1:
+                    dogru = "a";
+                    break;
+                case 2:
+                    dogru = "c";
+                    break;
+            }
         }
 
         private void Label1_Click(object sender, EventArgs e)
@@ -103,6 +120,23 @@ namespace Ceviri3
             bunifuFlatButton2.Visible = true;
             bunifuFlatButton3.Visible = true;
             bunifuFlatButton4.Visible = true;
+        }
+
+        public void database_kontrol()
+        {
+            if(!File.Exists(Environment.CurrentDirectory + "/database.ini"))
+            {
+                
+            }
+            else
+            {
+
+            }
+        }
+
+        private void Arkaplan_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
